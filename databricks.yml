@@ -4,13 +4,26 @@ bundle:
 include:
   - resources/*.yml
 
+variables:
+  catalog:
+    description: "The catalog to use for the target environment"
+  source_volume:
+    description: "The source volume to use for the target environment"
+
 targets:
   dev:
     mode: development
     default: true
-  
+    variables:
+      catalog: ccap_md
+      source_volume: source_files
   qa:
     mode: development
-  
+    variables:
+      catalog: ccap_md_qa
+      source_volume: source_files_qa
   prod:
     mode: production
+    variables:
+      catalog: ccap_md_prod
+      source_volume: source_files_prod
