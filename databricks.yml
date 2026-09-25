@@ -1,0 +1,16 @@
+bundle:
+  name: ccap_md
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+  
+  qa:
+    mode: development
+  
+  prod:
+    mode: production
