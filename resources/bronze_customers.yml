@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: ingest_customer
           notebook_task:
-            notebook_path: ../02_bronze/01_create_customers
+            notebook_path: ../02_bronze/01_create_customers.ipynb
           environment_key: default
       environments:
         - environment_key: default
