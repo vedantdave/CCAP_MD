@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    bronze_customer:
+      name: ${bundle_target}-bronze-customers
+      tasks:
+        - task_key: ingest_customer
+          notebook_task:
+            notebook_path: ../02/01_create_customers
+          environment_key: default
+      environments:
+        - environment_key: default
+          spec:
+            client: "2"
+            dependencies:
+              - "pyspark"

@@ -1,5 +1,5 @@
 bundle:
-  name: ccap_md
+  name: credit-card-analytics-platform
 
 include:
   - resources/*.yml
